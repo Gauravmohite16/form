@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Love</title>
+<style>
+    body {
+        font-family: cursive, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    form {
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid #931919;
+        background-color: #bdbbbb;
+        border-radius: 5px;
+    }
+    input[type="password"] {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #000000;
+        border-radius: 3px;
+        margin-right: 10px;
+    }
+    input[type="submit"] {
+        padding: 10px 30px;
+        font-size: 18px;
+        background-color: #1052ec;
+        color: rgb(244, 247, 244);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-family: cursive;
+    }
+    img {
+        margin-top: 20px;
+        max-width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+</style>
+</head>
+<body>
+    <h1>Heyyyy!!!!</h1>
+    <h3>just letting you know type my name😂</h3>
+  <form id="passwordForm">
+        <label for="password">Enter your partner name as password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="pictureContainer" style="display: none;">
+        <h2>Aditiiiiiiiiiiiiiiiiiiiiii❤️:</h2>
+        <img id="picture" src="download.png" alt="Picture">
+    </div>
+
+    <script>
+        const form = document.getElementById('passwordForm');
+        const pictureContainer = document.getElementById('pictureContainer');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const password = document.getElementById('password').value;
+
+            // Replace 'open sesame' with your desired password
+            if (password.toLowerCase() === 'gaurav') {
+                pictureContainer.style.display = 'block';
+            } else {
+                alert('Incorrect password. Please try again in small letters.');
+            }
+        });
+    </script>
+</body>
+</html>
